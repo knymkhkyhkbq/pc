@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>𝓞𝓹𝓽𝓲𝓶𝓲𝔃𝓪𝓬𝓲ó𝓷 𝓭𝓮 𝓟𝓒</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <!-- Agregar Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="icon" href="/static/images/pc-removebg-preview.png" type="image/x-icon">
+    </head>
+    
+<body>
+    <header>
+        <div class="container">
+            <h1>𝕠𝕡𝕥𝕚𝕞𝕚𝕫𝕒 𝕥𝕦 𝕡𝕔 𝕔𝕠𝕟 𝕝𝕠𝕤 𝕞𝕖𝕛𝕠𝕣𝕖𝕤 𝕤𝕖𝕣𝕚𝕔𝕚𝕠𝕤 </h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">𝕀𝕟𝕚𝕔𝕚𝕠</a></li>
+                    <li><a href="{{ url_for('ver_productos') }}">ℙ𝕣𝕠𝕕𝕦𝕔𝕥𝕠𝕤</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="intro">
+            <h2>¿𝓟𝓸𝓻 𝓺𝓾é 𝓸𝓹𝓽𝓲𝓶𝓲𝔃𝓪𝓻 𝓽𝓾 𝓟𝓒?</h2>
+            <p>𝐌𝐞𝐣𝐨𝐫𝐚 𝐞𝐥 𝐫𝐞𝐧𝐝𝐢𝐦𝐢𝐞𝐧𝐭𝐨 𝐝𝐞 𝐭𝐮 𝐏𝐂 𝐜𝐨𝐧 𝐧𝐮𝐞𝐬𝐭𝐫𝐨𝐬 𝐬𝐞𝐫𝐯𝐢𝐜𝐢𝐨𝐬 𝐩𝐞𝐫𝐬𝐨𝐧𝐚𝐥𝐢𝐳𝐚𝐝𝐨𝐬. ¡𝐍𝐨 𝐦á𝐬 𝐥𝐞𝐧𝐭𝐢𝐭𝐮𝐝 𝐧𝐢 𝐩𝐫𝐨𝐛𝐥𝐞𝐦𝐚𝐬 𝐝𝐞 𝐫𝐞𝐧𝐝𝐢𝐦𝐢𝐞𝐧𝐭𝐨!</p>
+        </section>
+
+
+        <section id="servicios" class="services-section">
+          <h2>𝕊𝕖𝕣𝕧𝕚𝕔𝕚𝕠𝕤 𝕕𝕖 𝕆𝕡𝕥𝕚𝕞𝕚𝕫𝕒𝕔𝕚ó𝕟 𝕕𝕖 ℙℂ</h2>
+          <p>Mejora el rendimiento de tu computadora con nuestros servicios profesionales de optimización. Ya sea que necesites un impulso en la velocidad de tu sistema, la limpieza de archivos innecesarios o el ajuste de tu hardware, tenemos las soluciones adecuadas para ti.</p>
+      
+          <div class="service-card">
+              <h3>𝕆𝕡𝕥𝕚𝕞𝕚𝕫𝕒𝕔𝕚ó𝕟 𝕕𝕖 𝕊𝕚𝕤𝕥𝕖𝕞𝕒</h3>
+              <p>Mejoramos la velocidad de arranque, la carga de programas y la ejecución general de tu PC eliminando archivos basura, desfragmentando discos duros y optimizando las configuraciones del sistema.</p>
+              <ul>
+                  <li>Eliminación de archivos temporales y caché</li>
+                  <li>Desfragmentación y optimización de discos</li>
+                  <li>Ajustes para un inicio más rápido</li>
+              </ul>
+          </div>
+      
+          <div class="service-card">
+              <h3>ℝ𝕖𝕧𝕚𝕤𝕚ó𝕟 𝕕𝕖 ℍ𝕒𝕣𝕕𝕨𝕒𝕣𝕖</h3>
+              <p>Evaluamos el estado de los componentes de hardware de tu PC, como la RAM, el disco duro y la tarjeta gráfica, para asegurarnos de que estén funcionando correctamente y te brindamos recomendaciones de actualización si es necesario.</p>
+              <ul>
+                  <li>Chequeo de memoria RAM</li>
+                  <li>Revisión de temperatura y ventilación</li>
+                  <li>Diagnóstico de fallos en discos duros</li>
+              </ul>
+          </div>
+      
+          <div class="service-card">
+              <h3>𝕆𝕡𝕥𝕚𝕞𝕚𝕫𝕒𝕔𝕚ó𝕟 𝕕𝕖 𝕊𝕠𝕗𝕥𝕨𝕒𝕣𝕖</h3>
+              <p>Actualizamos y ajustamos tus programas y sistemas operativos para asegurar que estén funcionando de manera eficiente. Esto incluye la eliminación de software innecesario, la actualización de controladores y la instalación de programas recomendados.</p>
+              <ul>
+                  <li>Eliminación de software no deseado</li>
+                  <li>Instalación de actualizaciones críticas y controladores</li>
+                  <li>Recomendaciones para mejorar el rendimiento del software</li>
+              </ul>
+          </div>
+      
+          <div class="service-card">
+              <h3>ℝ𝕖𝕡𝕒𝕣𝕒𝕔𝕚ó𝕟 𝕕𝕖 𝔼𝕣𝕣𝕠𝕣𝕖𝕤 𝕕𝕖 𝕊𝕚𝕤𝕥𝕖𝕞𝕒</h3>
+              <p>Solucionamos errores comunes del sistema que pueden estar afectando el rendimiento de tu PC, como problemas de arranque, fallos de Windows, y errores de software que pueden ralentizar tu computadora.</p>
+              <ul>
+                  <li>Solución de errores en el registro de Windows</li>
+                  <li>Reparación de archivos de sistema corruptos</li>
+                  <li>Solución de problemas de arranque y rendimiento</li>
+              </ul>
+          </div>
+      
+          <div class="service-card">
+              <h3>𝕆𝕡𝕥𝕚𝕞𝕚𝕫𝕒𝕔𝕚ó𝕟 𝕕𝕖 𝕁𝕦𝕖𝕘𝕠𝕤</h3>
+              <p>Mejoramos la experiencia de juego optimizando la configuración de tu PC para obtener el mejor rendimiento posible en juegos, ajustando la tarjeta gráfica, los controladores y el sistema operativo para obtener más FPS y una experiencia de juego más fluida.</p>
+              <ul>
+                  <li>Optimización de gráficos y configuraciones de juegos</li>
+                  <li>Ajuste de la configuración de la tarjeta gráfica</li>
+                  <li>Recomendaciones para mejorar el rendimiento en juegos</li>
+              </ul>
+          </div>
+      
+          <div class="contact-button">
+            <a href="productos" class="button">𝑺̲̅𝒐̲̅𝒍̲̅𝒊̲̅𝒄̲̅𝒊̲̅𝒕̲̅𝒂̲̅ 𝒖̲̅𝒏̲̅ 𝑺̲̅𝒆̲̅𝒓̲̅𝒗̲̅𝒊̲̅𝒄̲̅𝒊̲̅𝒐̲̅</a>
+          </div>
+      </section>
+      
+
+        <section class="productos">
+            <div class="producto-list">
+                {% for producto in productos %}
+                    <div class="producto-card">
+                        
+                        <h3>{{ producto.nombre }}</h3>
+                        <p>{{ producto.descripcion }}</p>
+                        <a href="{{ url_for('pedido', producto_id=producto.id) }}" class="btn">C̤̈̈ö̤̈m̤̈̈p̤̈̈r̤̈̈ä̤̈r̤̈̈ Ä̤̈ḧ̤̈ö̤̈r̤̈̈ä̤̈</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="redes-sociales">
+            <h3>𝕊í𝕘𝕦𝕖𝕟𝕠𝕤 𝕖𝕟 𝕟𝕦𝕖𝕤𝕥𝕣𝕒𝕤 𝕣𝕖𝕕𝕖𝕤 𝕤𝕠𝕔𝕚𝕒𝕝𝕖𝕤</h3>
+            <ul>
+                <!-- Discord -->
+                <li><a href="https://discord.gg/wYZfv25d" target="_blank"><i class="fab fa-discord"></i> 𝔻𝕚𝕤𝕔𝕠𝕣𝕕</a></li>
+                <!-- YouTube -->
+                <li><a href="https://www.youtube.com/@daniel_13ff38" target="_blank"><i class="fab fa-youtube"></i> 𝕐𝕠𝕦𝕋𝕦𝕓𝕖</a></li>
+                <!-- TikTok -->
+                <li><a href="https://www.tiktok.com/@gamabaja8" target="_blank"><i class="fab fa-tiktok"></i> 𝕋𝕚𝕜𝕋𝕠𝕜</a></li>
+            </ul>
+        </section>
+        
+        <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Optimización de PC. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>particlesJS('particles-js', {
+        "particles": {
+          "number": {
+            "value": 100,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#ff5722"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#ff5722"
+            },
+            "polygon": {
+              "nb_sides": 5
+            }
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 0.3,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 4,
+              "size_min": 0.3,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ff5722",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false
+          }
+        },
+        "interactivity": {
+          "detect_on": "window",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "repulse"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            }
+          }
+        },
+        "retina_detect": true
+      });
+      </script>
+</body>
+</html>

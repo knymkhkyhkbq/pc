@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Pedido - {{ producto.nombre }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="/static/images/pc-removebg-preview.png" type="image/x-icon">
+    <header>
+        <div class="container">
+            <h1>Confirmar Pedido de {{ producto.nombre }}</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                    <li><a href="{{ url_for('ver_productos') }}">Productos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="confirmacion">
+            <h2>¿Estás seguro de que quieres comprar {{ producto.nombre }}?</h2>
+            <p><strong>Precio:</strong> ${{ producto.precio }}</p>
+            <p><strong>Descripción:</strong> {{ producto.descripcion }}</p>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="RR6X7AMDTW8BW">
+                <input type="hidden" name="item_name" value="{{ producto.nombre }}">
+                <input type="hidden" name="amount" value="{{ producto.precio }}">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="return" value="http://tusitio.com/gracias">
+                <input type="hidden" name="cancel_return" value="http://tusitio.com/cancelado">
+                <button type="submit" class="btn">Confirmar Pedido y Pagar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Optimización de PC. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

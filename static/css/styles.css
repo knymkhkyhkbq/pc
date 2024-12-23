@@ -1,0 +1,505 @@
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Borde brillante y animado en el header */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url('../images/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    position: relative;
+    animation: borderGlow 1.5s ease-in-out infinite; /* Animación del borde */
+}
+
+/* Animación del borde brillante */
+@keyframes borderGlow {
+    0% {
+        border-top: 5px solid #ff5722;
+    }
+    50% {
+        border-top: 5px solid #ff7f50;
+    }
+    100% {
+        border-top: 5px solid #ff5722;
+    }
+}
+
+
+/* Efecto 3D en el texto */
+header h1 {
+    font-size: 2.5rem;
+    color: #fdf900;
+    text-shadow: 0 0 10px #2243ff, 0 0 20px #3dabf5, 0 0 30px #ff7f50;
+    font-family: 'Impact', sans-serif;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+    transform: perspective(500px) rotateX(15deg); /* Efecto 3D */
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f3ff50; /* Naranja en hover para un efecto dinámico */
+    transform: scale(1.1); /* Aumenta el tamaño del enlace en hover */
+}
+
+nav ul li a:active {
+    color: #f0ff22; /* Efecto de color cuando se hace clic */
+}
+
+/* Añadir un contorno difuso al header */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Sombra sutil en todo el header */
+    z-index: -1;
+}
+
+
+/* Fondo animado futurista */
+main {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.822), rgba(0, 0, 0, 0.575)),
+        url('../images/pc-removebg-preview.png') no-repeat center center fixed; 
+    background-size: cover;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+    
+}
+
+/* Animación del fondo */
+@keyframes movingBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Sección de Introducción */
+.intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    color: #fdf900; /* Color gamer */
+    text-transform: uppercase;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 1px;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: #ffffff;
+    line-height: 1.8;
+    margin-top: 10px;
+    font-weight: lighter;
+    max-width: 800px;
+    margin: 20px auto;
+    text-shadow: 1px 1px 2px rgba(25, 136, 247, 0.8);
+}
+
+/* Estilo de los Productos */
+.productos {
+    margin-top: 50px;
+}
+
+.producto-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.producto-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    max-width: 300px;
+    border: 2px solid #ffffff;
+    transform-style: preserve-3d; /* Habilitar el efecto 3D */
+    perspective: 1000px; /* Distancia de la cámara */
+}
+
+.producto-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7), 0 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Efecto de sombra proyectada */
+header, .producto-card, footer {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto de máquina de escribir para el texto */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+h1, h2 {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: typing 4s steps(40) 1s forwards;
+}
+
+
+.producto-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1);
+    filter: brightness(0.8);
+}
+
+.producto-card img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    filter: brightness(1);
+}
+
+.productos h2 {
+    font-size: 2.5rem;
+    color: #fdf900; /* Color gamer */
+    text-transform: uppercase;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 1px;
+}
+.producto-card h3 {
+    font-size: 1.5rem;
+    color: #fdf900;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.producto-card p {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(24, 161, 247, 0.8);
+}
+
+/* Botones con animación de holograma */
+.producto-card .btn {
+    position: relative;
+    background-color: transparent;
+    color: #fdf900;
+    padding: 12px 25px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #fdf900;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+.producto-card .btn:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #fbff00;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.producto-card .btn:hover:before {
+    opacity: 0.2;
+    width: 0;
+    height: 0;
+}
+
+.producto-card .btn:hover {
+    color: #000000;
+    background-color: #fbff00;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #227aff, 0 0 50px #227aff;
+}
+
+
+/* Estilo de las redes sociales */
+.redes-sociales {
+    margin-top: 80px;
+}
+
+.redes-sociales h3 {
+    font-size: 2rem;
+    color: #fffb00;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(24, 102, 247, 0.651);
+}
+.redes-sociales ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0;
+}
+
+.redes-sociales ul li {
+    font-size: 1.6rem;
+}
+
+.redes-sociales ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+/* Efecto de parpadeo en los íconos de redes sociales */
+.redes-sociales ul li a:hover {
+    color: #fbff00;
+    transform: scale(1.1);
+    animation: iconBlink 1s infinite alternate; /* Efecto de parpadeo */
+}
+
+/* Animación de parpadeo */
+@keyframes iconBlink {
+    0% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+
+
+.redes-sociales ul li a i {
+    margin-right: 10px;
+    font-size: 2.2rem;
+}
+
+.redes-sociales ul li a:hover i {
+    color: #fbff00;
+}
+
+/* Efectos responsivos */
+@media (max-width: 1024px) {
+    .producto-list {
+        gap: 20px;
+    }
+
+    .producto-card {
+        width: 300px;
+    }
+
+    .redes-sociales ul {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro h2 {
+        font-size: 2rem;
+    }
+
+    .producto-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .producto-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .redes-sociales ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+
+/* Footer */
+footer {
+    background-color: transparent;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #fbff00, 0 0 10px #fbff00, 0 0 15px #fbff00;
+    }
+    50% {
+        text-shadow: 0 0 15px #fbff00, 0 0 30px #fbff00, 0 0 45px #fbff00;
+    }
+    100% {
+        text-shadow: 0 0 5px #fbff00, 0 0 10px #fbff00, 0 0 15px #fbff00;
+    }
+}
+
+
+
+/* Botón de PayPal */
+form .btn {
+    background-color: #0070ba;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form .btn:hover {
+    background-color: #005ea6;
+}
+
+
+
+
+.services-section {
+    padding: 50px;
+    background-color: #f4f4f400;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    color: #ffee00;
+    margin-bottom: 20px;
+}
+
+.services-section p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(24, 161, 247, 0.8);
+}
+
+.service-card {
+    background-color: #0026ff00;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(238, 255, 0, 0.432);
+    transition: transform 0.3s ease;
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    color: #fbff00;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(24, 161, 247, 0.8);
+}
+
+.service-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #d1cfcf;
+}
+
+.service-card ul li {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact-button {
+    margin-top: 30px;
+}
+
+.contact-button .button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    background: linear-gradient(45deg, #ffe600, #ffe600);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-button .button:hover {
+    background: linear-gradient(45deg, #ff9900, #ffbb00);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 187, 0, 0.767);
+    color: #ffffff;
+}
